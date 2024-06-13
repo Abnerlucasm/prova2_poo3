@@ -1,5 +1,4 @@
 # Checklist de implementação
-___
 ## model
 - [ ] Cidade
 - [ ] Cliente
