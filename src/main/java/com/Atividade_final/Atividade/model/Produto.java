@@ -8,7 +8,7 @@ public class Produto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @Column
     @Nonnull
@@ -16,10 +16,10 @@ public class Produto {
 
     @Column
     @Nonnull
-    private int quantidadeEstoque = 0;
+    private Integer quantidadeEstoque = 0;
 
     @Column
     @Nonnull
-    private double valorVenda = 0.0;
+    private Double valorVenda = 0.0;
 
 }

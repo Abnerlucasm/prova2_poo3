@@ -7,10 +7,12 @@ import jakarta.persistence.*;
 public class Cidade {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idCidade;
+    private Integer idCidade;
+
     @Column
     @Nonnull
     private String nomeCidade;
+
     @Column
     @Nonnull String ufCidade;
 }
