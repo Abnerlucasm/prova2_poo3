@@ -8,11 +8,9 @@
 - [x] Produtos do pedido
 ## resource
 - [x] Cidade
-- [ ] Cliente
-- [ ] Produto
-- [ ] Pedido
-- [ ] Cabeçalho de pedido
-- [ ] Produtos do pedido
+- [x] Cliente
+- [x] Produto
+- [ ] Pedido (implementação parcial, engloba o cadastro tanto do cabeçalho quando dos produtos)
 ## repository
 - [x] Cidade
 - [x] Cliente
