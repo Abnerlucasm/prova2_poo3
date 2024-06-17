@@ -12,8 +12,14 @@ public class CidadeService {
     CidadeRepository CidadeRepo;
     // Operações CRUD padrão
 
-    public Cidade InsereCidade (Cidade c) {
-        return CidadeRepo.save(c);
+    public boolean InsereCidade (Cidade c) {
+        try {
+            CidadeRepo.save(c);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
     public Cidade AlteraCidade (Cidade c) {
         if(CidadeRepo.findById(c.getIdCidade()) == null){

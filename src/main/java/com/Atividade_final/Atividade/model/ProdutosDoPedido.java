@@ -25,4 +25,9 @@ public class ProdutosDoPedido {
     @JoinColumn(name = "idCabPedido", nullable = false)
     @Getter @Setter
     private CabeçalhoDePedido idCabPedido;
+
+    @ManyToOne
+    @JoinColumn(name = "id", nullable = false)
+    @Getter @Setter
+    private Produto Produto;
 }
