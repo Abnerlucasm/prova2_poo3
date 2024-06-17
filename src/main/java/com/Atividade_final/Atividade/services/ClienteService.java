@@ -10,8 +10,13 @@ public class ClienteService {
     @Autowired
     ClienteRepository ClienteRepo;
     // Operações CRUD padrão
-    public Cliente InsereCliente (Cliente c) {
-        return ClienteRepo.save(c);
+    public boolean InsereCliente (Cliente c) {
+        try {
+            ClienteRepo.save(c);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     public Cliente AlteraCliente (Cliente c) {

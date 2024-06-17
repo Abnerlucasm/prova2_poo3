@@ -21,4 +21,9 @@ public class Cliente {
     @Getter @Setter
     private String nomeCliente;
 
+    @ManyToOne
+    @JoinColumn(name = "idCidade", nullable = false)
+    @Getter @Setter
+    private Cidade cidade;
+
 }

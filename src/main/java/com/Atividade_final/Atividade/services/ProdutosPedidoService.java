@@ -1,6 +1,7 @@
 package com.Atividade_final.Atividade.services;
 
 import com.Atividade_final.Atividade.model.CabeçalhoDePedido;
+import com.Atividade_final.Atividade.model.Produto;
 import com.Atividade_final.Atividade.model.ProdutosDoPedido;
 import com.Atividade_final.Atividade.repository.ProdutosPedidoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +13,12 @@ public class ProdutosPedidoService {
     ProdutosPedidoRepository ProdRepo;
     // Operações CRUD padrão
 
-    public ProdutosDoPedido InsereProdPedido (ProdutosDoPedido prod) {
-        return ProdRepo.save(prod);
+    public ProdutosDoPedido InsereProdPedido (Produto prod, Integer qtd, CabeçalhoDePedido idPedido) {
+        ProdutosDoPedido prodpedido = new ProdutosDoPedido();
+        prodpedido.setProduto(prod);
+        prodpedido.setIdCabPedido(idPedido);
+        prodpedido.setQuantidadeProduto(qtd);
+        return ProdRepo.save(prodpedido);
     }
     public ProdutosDoPedido AlteraProdPedido (ProdutosDoPedido prod) {
         if(ProdRepo.findById(prod.getIdProdPedido()) == null){

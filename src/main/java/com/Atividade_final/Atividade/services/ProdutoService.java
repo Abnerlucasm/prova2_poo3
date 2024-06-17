@@ -11,8 +11,13 @@ public class ProdutoService {
     ProdutoRepository ProdutoRepo;
     // Operações CRUD padrão
 
-    public Produto InsereProduto (Produto p) {
-        return ProdutoRepo.save(p);
+    public boolean InsereProduto (Produto p) {
+        try {
+            ProdutoRepo.save(p);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
     }
     public Produto AlteraProduto (Produto p) {
         if(ProdutoRepo.findById(p.getId()) == null){
